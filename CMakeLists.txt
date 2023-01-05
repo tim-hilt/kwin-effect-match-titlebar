@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(MATCH_TITLEBAR kwin_effect_match_titlebar)
-
-project(${MATCH_TITLEBAR})
+project(kwin_effect_match_titlebar)
 
 find_package(ECM REQUIRED NO_MODULE)
 

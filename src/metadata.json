@@ -1,0 +1,18 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Email": "timhilt@live.de",
+        "Name": "Tim Hilt"
+      }
+    ],
+    "Category": "Appearance",
+    "Description": "Match titlebar to window content",
+    "EnabledByDefault": true,
+    "Icon": "preferences-system-windows-effect-shaders",
+    "Id": "kwin_effect_match_titlebar",
+    "License": "MIT",
+    "Name": "Match Titlebar",
+    "ServiceTypes": ["KWin/Effect"]
+  }
+}

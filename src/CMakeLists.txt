@@ -4,23 +4,30 @@ set(KF5_MIN_VERSION "5.9.0")
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS KIO GlobalAccel I18n)
+find_package (KF5 REQUIRED COMPONENTS
+    Config
+    CoreAddons
+    WindowSystem
+)
 
 set(effect_SRCS
     plugin.cpp
     MatchTitlebar.cpp
 )
 
-add_library(${MATCH_TITlEBAR} SHARED ${effect_SRCS})
+add_library(kwin_effect_match_titlebar SHARED ${effect_SRCS})
 
-target_link_libraries(${MATCH_TITLEBAR}
+target_link_libraries(kwin_effect_match_titlebar
     PRIVATE
     kwineffects
+    KF5::ConfigCore
+    KF5::CoreAddons
+    KF5::WindowSystem
 )
 
 install(
     TARGETS
-        ${MATCH_TITLEBAR}
+        kwin_effect_match_titlebar
     DESTINATION
         ${MODULEPATH}/kwin/effects/plugins/
 )
