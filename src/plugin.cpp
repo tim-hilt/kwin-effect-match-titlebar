@@ -2,8 +2,8 @@
 
 namespace KWin {
 
-KWIN_EFFECT_FACTORY_SUPPORTED(KWin::MatchTitlebar, "metadata.json",
-                              return KWin::MatchTitlebar::supported();)
+KWIN_EFFECT_FACTORY_SUPPORTED(MatchTitlebar, "metadata.json",
+                              return MatchTitlebar::supported();)
 } // namespace KWin
 
 #include "plugin.moc"

@@ -13,7 +13,7 @@ public:
 
   static bool supported();
 
-private:
+private Q_SLOTS:
   void windowActivated(EffectWindow *w);
 };
 

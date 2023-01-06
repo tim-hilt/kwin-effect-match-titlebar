@@ -1,10 +1,4 @@
-set(QT_MIN_VERSION "5.4.0")
-set(KF5_MIN_VERSION "5.9.0")
-
-include(KDEInstallDirs)
-include(KDECMakeSettings)
-
-find_package (KF5 REQUIRED COMPONENTS
+find_package(KF5 REQUIRED COMPONENTS
     Config
     CoreAddons
     WindowSystem
@@ -19,16 +13,18 @@ add_library(kwin_effect_match_titlebar SHARED ${effect_SRCS})
 
 target_link_libraries(kwin_effect_match_titlebar
     PRIVATE
+
     kwineffects
-    # kwinglutils
+    kwinglutils
+
     KF5::ConfigCore
     KF5::CoreAddons
     KF5::WindowSystem
+
+    epoxy
 )
 
 install(
-    TARGETS
-        kwin_effect_match_titlebar
-    DESTINATION
-        ${MODULEPATH}/kwin/effects/plugins/
+    TARGETS kwin_effect_match_titlebar
+    DESTINATION ${PLUGIN_INSTALL_DIR}/kwin/effects/plugins/
 )
