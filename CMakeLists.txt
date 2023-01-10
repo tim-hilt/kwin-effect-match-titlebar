@@ -7,6 +7,8 @@ find_package(ECM REQUIRED NO_MODULE)
 add_definitions (-Wall -Wunused -Werror)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE include-what-you-use)
+set(CMAKE_CXX_CPPCHECK cppcheck)
 
 set(CMAKE_MODULE_PATH
     ${CMAKE_MODULE_PATH}

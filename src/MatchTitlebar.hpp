@@ -1,6 +1,10 @@
 #pragma once
 
+// KDE
 #include <kwineffects.h>
+
+// Qt
+#include <QObject>
 
 namespace KWin {
 
